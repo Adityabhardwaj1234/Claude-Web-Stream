@@ -1,0 +1,2 @@
+[console_scripts]
+cws = claudewebstream.cli.main:app

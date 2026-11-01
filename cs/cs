@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+# Claude Stream short command. Runs from the repository root so `app` is importable.
+# Install: chmod +x app/cs && ln -s "$PWD/app/cs" ~/.local/bin/cs
+SCRIPT="$(readlink -f "$0" 2>/dev/null || echo "$0")"
+ROOT="$(cd "$(dirname "$SCRIPT")/.." && pwd)"
+cd "$ROOT" || exit 1
+exec "${PYTHON:-python3}" -m app.server "$@"
