@@ -1,9 +1,0 @@
-__pycache__/
-*.pyc
-.clautewebstream/
-server.log
-sdk/typescript/node_modules/
-sdk/typescript/dist/
-*.zip
-temp/
-.env

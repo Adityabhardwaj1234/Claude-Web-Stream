@@ -7,3 +7,4 @@ sdk/typescript/dist/
 *.zip
 temp/
 .env
+*.egg-info/

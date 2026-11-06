@@ -1,4 +1,4 @@
-const API = '';
+﻿const API = '';
 let userId = localStorage.getItem('userId') || '';
 let apiKey = localStorage.getItem('apiKey') || '';
 let currentConv = null;
@@ -217,3 +217,13 @@ loadModels();
 refreshConvs();
 refreshUsage();
 fetch(API + '/health').then(r=>r.json()).then(()=>{ $('status-pill').textContent='online'; $('status-pill').style.borderColor='#10a37f'; }).catch(()=>{});
+link-claude-btn.onclick = async () => {
+  if (!apiKey) { alert('Login first'); return; }
+  link-claude-btn.textContent = 'Waiting for browser login...';
+  try {
+    const r = await api('/claude/link-session', { method: 'POST' });
+    alert('Linked org ' + r.org_id);
+    await loadModels();
+  } catch (e) { alert(e.message); }
+  link-claude-btn.textContent = 'Link Claude account';
+};
