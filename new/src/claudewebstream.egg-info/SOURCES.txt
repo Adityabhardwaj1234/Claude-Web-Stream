@@ -3,6 +3,7 @@ pyproject.toml
 src/claudewebstream/__init__.py
 src/claudewebstream/__main__.py
 src/claudewebstream/config.py
+src/claudewebstream/gui_main.py
 src/claudewebstream.egg-info/PKG-INFO
 src/claudewebstream.egg-info/SOURCES.txt
 src/claudewebstream.egg-info/dependency_links.txt
@@ -19,6 +20,7 @@ src/claudewebstream/api/routes/claude.py
 src/claudewebstream/api/routes/conversations.py
 src/claudewebstream/api/routes/health.py
 src/claudewebstream/api/routes/keys.py
+src/claudewebstream/api/routes/messages.py
 src/claudewebstream/api/routes/streams.py
 src/claudewebstream/api/routes/usage.py
 src/claudewebstream/auth/__init__.py

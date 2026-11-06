@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import os
 
@@ -9,7 +9,7 @@ from fastapi.staticfiles import StaticFiles
 from ..config import settings
 from ..db.session import init_db
 from ..streaming.manager import StreamManager
-from .routes import auth, keys, claude, chat, streams, artifacts, usage, health, conversations
+from .routes import auth, keys, claude, chat, streams, artifacts, usage, health, conversations, messages
 
 settings.ensure_home()
 
